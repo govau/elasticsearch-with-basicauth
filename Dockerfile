@@ -8,3 +8,9 @@ RUN \
 
 # Install basic auth plugin
 RUN elasticsearch-plugin install --batch https://github.com/elasticfence/elasticsearch-http-user-auth/releases/download/v5.1.2/elasticfence-5.1.2-SNAPSHOT.zip
+
+# Enable it
+ENV elasticfence.disabled false
+
+# Set data location
+ENV path.data /data
